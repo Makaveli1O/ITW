@@ -1,0 +1,174 @@
+body{font-family: "Arial";}
+#page-top{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: ". main .";
+    background-image: url("img/img-jumbotron-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+/*------head------*/
+#main{
+    grid-area: main;
+    margin-top: 20px;
+}
+
+header > .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main-menu{
+    font-family: "Arial";
+    text-transform: uppercase;
+}
+
+.main-menu li{
+    display: inline;
+    margin-right: 10px;
+}
+
+.main-menu a{
+    text-decoration: none;
+    color: WHITE;
+}
+
+.main-title{
+    color: WHITE;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 15VH 90VH;
+    grid-template-areas:". . ."
+                        ". title-content .";
+}
+
+.main-title > .content{
+    grid-area: title-content;
+    text-align: center;
+}
+
+.main-title > .content h1{font-size: 64px;}
+
+.main-title > .content a{
+    text-decoration: none;
+    color: WHITE;
+    padding: 15px;
+    border: 1px WHITE solid;
+}
+
+.main-title p{margin-bottom: 10vh;}
+
+.main-title .lead{
+    font-size: 24px;
+    color: darkgray;
+}
+
+.event-date{font-size: 25px;}
+/*--head-queries--*/
+
+@media screen and (max-width: 1052px) {
+    #page-top {
+            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-areas: "main main main";
+    }
+
+    .main-title{
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 15VH 90VH;
+    grid-template-areas:". . ."
+                        ". title-content .";
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #page-top {
+            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-areas: "main main main";
+    }
+
+    .logo{grid-area: logo}
+
+    .main-menu ul{font-size: 12px}
+
+    header > .content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'logo'
+    }
+
+    .main-title{
+        grid-template-columns: 1fr;
+        grid-template-rows: 100VH;
+        grid-template-areas:"title-content";
+    }
+
+    .event-date{font-size: 17px;}
+    
+    .main-title > .content h1{font-size: 50px;}
+    
+    .main-title .lead{font-size: 18px;}
+}
+/*--head-query-end--*/
+
+/*------head-end------*/
+
+
+/*------content-------*/
+.section-title{
+    font-size:34px;
+    color: #0e1954;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#section-intro .content{ /*all the section's ID beggining with "section-"*/
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 20px
+}
+
+#section-intro .lead{font-size: 19px;}
+
+#section-intro .contact{
+    font-size: 14px;
+    margin-top: 1em;
+}
+
+address {color: gray;}
+
+address strong{color: #000026;}
+
+.lead p{
+    color: #000026;
+}
+
+#section-speaker .content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 2fr;
+    grid-template-areas: "speaker-title"
+                         "speaker-content";
+}
+
+#section-speaker .section-title{grid-area: speaker-title}
+
+#section-speaker .section-content{
+    grid-area: speaker-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#section-speaker img{
+    width: 200px;
+}
+
+#section-speaker {
+    background: whitesmoke;
+}
+
+
+
+/*-----content-end--------*/
+

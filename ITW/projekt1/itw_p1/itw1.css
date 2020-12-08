@@ -1,0 +1,398 @@
+body{font-family: "Arial";}
+#page-top{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: "main main main";
+    background-image: url("img/img-jumbotron-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+address {color: gray;}
+
+address strong{color: #000026;}
+
+.lead p{color: #000026;}
+/*------head------*/
+#main{
+    grid-area: main;
+    margin-top: 20px;
+}
+
+header > .content{
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-areas: ". logo main-menu ."
+}
+
+.logo{grid-area: logo;}
+
+.main-menu{
+    grid-area: main-menu;
+    font-family: "Arial";
+    text-transform: uppercase;
+}
+
+.main-menu li{
+    display: inline;
+    margin-right: 10px;
+}
+
+.main-menu a{
+    text-decoration: none;
+    color: WHITE;
+}
+
+.main-menu a:hover{color: #fd367e;}
+
+.main-title{
+    color: WHITE;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 15VH 90VH;
+    grid-template-areas:". . ."
+                        ". title-content .";
+}
+
+.main-title > .content{
+    grid-area: title-content;
+    text-align: center;
+}
+
+.main-title > .content h1{font-size: 64px;}
+
+.main-title > .content a{
+    text-decoration: none;
+    color: WHITE;
+    padding: 15px;
+    border: 1px WHITE solid;
+}
+
+.main-title p{margin-bottom: 10vh;}
+
+.main-title .lead{
+    font-size: 24px;
+    color: darkgray;
+}
+
+.event-date{font-size: 25px;}
+/*--head-queries--*/
+/*--PREROBIT QUERY---*/
+@media screen and (max-width: 1312px) {
+    header > .content{grid-template-columns: 1fr 1fr 3fr 1fr;}
+    .main-menu {text-align: right;}
+}
+
+@media screen and (max-width: 1106px) {
+    #main header > .content{
+    display: grid;
+    grid-template-columns: 1fr 3fr !important;
+    grid-template-areas: "logo  main-menu"!important
+    }
+
+    body #section-speaker .section-content{
+        grid-gap: 2px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #section-agenda{font-size: 15px;}
+    #section-agenda h2{font-size: 1em}
+    #section-agenda h3{font-size: 25 !important}
+    body #section-agenda .content{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:"agenda-title agenda-title";
+        color: #0e1954;
+    }
+    #section-partner img{width: 130px}
+
+    .about-event .content{grid-template-columns: 1fr !important;}
+}
+
+@media screen and (max-width: 883px) {
+    header > .content{grid-template-rows: 1fr 1fr;}
+    .main-title{grid-template-areas:". title-content .";}
+    body #section-partner .content{
+        grid-template-columns:  1fr 1fr 1fr 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "partner-title partner-title partner-title partner-title partner-title";
+    }
+    
+    .partner:nth-child(7){
+        grid-column-start: 3;
+    }
+
+    body #section-pricing .content{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "pricing-title pricing-title pricing-title pricing-title";
+        grid-column-gap: 20px;
+        grid-row-gap: 15px
+    }
+    .pricing-table-default:nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .pricing-table-default:nth-child(3){
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+    .pricing-table-default:nth-child(4){
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    body #section-speaker .section-content{
+        grid-template-columns: 1fr 1fr !important;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    body #section-speaker .section-content{grid-template-columns: 1fr 1fr;}
+    body #section-agenda .content{
+        grid-template-columns: 1fr;
+        grid-template-areas: "agenda-title";
+    }
+    #section-partner img{width: 150px}
+    body #section-partner .content{
+        grid-template-columns:  1fr 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "partner-title partner-title partner-title";
+    }
+    /*body #section-pricing .content{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "pricing-title";
+    }
+    body .pricing-table-default{margin: 5px 100px 5px 100px;}
+    body .pricing-head h3{font-size: 15px;}*/
+    #main header > .content{
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: "logo ."
+                             "main-menu main-menu main-menu main-menu ." !important;
+    }
+
+
+    #pricing-head h3{font-size: 15px !important;}
+    #main header > .content{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+        grid-template-rows: 2fr !important;
+        grid-template-areas: "logo logo . . ."
+                             ". main-menu main-menu main-menu ." !important;
+    }
+    .main-menu{text-align: left}
+
+}
+/*--head-query-end--*/
+
+/*------head-end------*/
+
+
+/*------content-------*/
+.section-title{
+    font-size:34px;
+    color: #0e1954;
+    text-align: center;
+    text-transform: uppercase;
+}
+/*--sections-general--*/
+section, footer{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr; 
+}
+
+#section-intro{
+    grid-template-areas: ". intro-content .";
+    padding-bottom:100px;
+}
+
+#section-speaker {
+    grid-template-areas: ". speaker-content .";
+    background: whitesmoke;
+}
+
+#section-agenda{
+    grid-template-areas: ". agenda-content .";
+}
+
+#section-pricing{
+    grid-template-areas: ". pricing-content .";
+    background: whitesmoke;
+    padding-bottom: 100px;
+}
+#section-partner{
+    grid-template-areas: ". partner-content .";
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+/*--end-sections-general--*/
+
+/*---CONTENTS---*/
+
+/*intro*/
+#section-intro .content{
+    grid-area: intro-content;
+    display: grid;
+    grid-template-columns:  3fr 1fr;
+    grid-column-gap: 20px
+}
+        #section-intro .lead{font-size: 19px;}
+
+        #section-intro .contact{
+            font-size: 14px;
+            margin-top: 1em;
+        }
+
+/*speaker*/
+#section-speaker .content{
+    grid-area: speaker-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 2fr;
+    grid-template-areas: "speaker-title"
+                         "speaker-content";
+}  
+        #section-speaker .section-title{grid-area: speaker-title;}
+        #section-speaker .section-content{
+            grid-area: speaker-content;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        #section-speaker img{
+        width: 200px;
+        }
+        #section-speaker h3{
+            color: #0e1954;
+            text-align: center;
+        }
+
+        #section-speaker h3 small::before{ 
+            content: "\A";
+            white-space: pre;
+        }
+
+        #section-speaker h3 small{
+            color: gray;
+            text-transform: uppercase;
+        }
+
+/*agenda*/
+#section-agenda .content{
+    grid-area: agenda-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas:"agenda-title agenda-title agenda-title";
+    color: #0e1954;
+}
+        #section-agenda .section-title{grid-area: agenda-title;}
+        #section-agenda h3{font-size: 29px; padding: 20px}
+        #section-agenda h4{
+            font-size: 17px;
+            padding: 20px;
+            text-transform: uppercase;
+        }
+        #section-agenda h4 span{
+            font-size: 13px
+        }
+        #section-agenda h4 span::before{
+            content: "\A";
+            white-space: pre;
+        }
+        #section-agenda time{
+            color: gray;
+            border-bottom: 1px #dedede solid;
+        }
+        #section-agenda .session{
+            border-left: 1px #dedede solid;
+            padding-left: 10px
+        }
+        #section-agenda time{
+            padding: 20px;
+            margin: 0px
+        }
+        #section-agenda .session{
+            padding: 0px
+        }
+/*pricing*/
+#section-pricing .content{
+    grid-area: pricing-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "pricing-title pricing-title pricing-title"
+                         ". . .";
+    grid-column-gap: 30px;
+}
+        #section-pricing .section-title p{
+            color: gray;
+            font-size: 15px;
+            text-transform: none;
+        }
+        #section-pricing .section-title{grid-area: pricing-title; }
+        #section-pricing .section-title h2{margin-bottom: 5px }
+        #section-pricing .pricing-head h3{
+            text-align: center;
+            background: #0e1954;
+            color: WHITE;
+            margin: 0px;
+            padding: 15px;
+            text-transform: uppercase;
+        }
+        #section-pricing .pricing-table-default{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 0.5fr;
+            text-align: center;
+            color: #373e53;
+            background: WHITE;
+        }
+        #section-pricing .pricing-table-default span{font-size: 50px;}
+        #section-pricing .pricing-detail ul{
+            list-style: none;
+            color: #373e53;
+            padding-left: 0px;
+        }
+        #section-pricing .pricing-detail li{margin: 20px;}
+        #section-pricing .btn {
+            text-decoration: none;
+            color: WHITE;
+            font-size: 20px;
+            background: #fd367e;
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 20px;
+            padding:10px;
+            padding-top: 12px;
+        }
+/*partner*/
+#section-partner .content{
+    display: grid;
+    grid-area: partner-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "partner-title partner-title partner-title partner-title partner-title partner-title"
+                         ". . . . . ."
+}
+        #section-partner .section-title{grid-area: partner-title}
+/*---end-CONTENTS---*/
+/*-----content-end--------*/
+/*-----footer-------*/
+footer{
+    grid-template-areas: ". footer-content .";
+}
+.copyright-section{
+    grid-area: footer-content;
+    text-align: center;
+    color: gray;
+}
+
+.copyright-section a{
+    color: #fd367e;
+    text-decoration: none;
+}
+
+/*-----footer-end-------*/
+

@@ -1,0 +1,151 @@
+<html>
+<head>
+  <title>SL Coffee</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script> 
+  <script type="text/javascript" src="js/slider.js"></script>
+  <script type="text/javascript" src="js/cookies.js"></script>
+ </head>
+<body onload="checkCookie(2)"></body>
+	<!----start-header----->
+        <div class="wrap">
+	        <div class="header">
+	        	<div class="header_top">
+	        		<div class="logo">
+                  	  <a href="index.html"><img src="images/logo.png" alt=""></a>
+                  </div>
+	      	       <div class="menu">
+				      <nav class="clearfix">
+						<ul class="clearfix">
+							    <li class="active" ><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>	
+						 </ul>
+						<a href="#" id="pull">Menu</a>
+					  </nav>
+                  </div>                 
+                </div>
+             </div>
+          </div>
+   <!----End-header----->
+	       <!------ Slider ------------>
+<div id="slider">
+  <a href="#" class="control_next">></a>
+  <a href="#" class="control_prev"><</a>
+  <ul>
+    <li style="background: url(images/slider-1.jpg); background-size: cover; background-attachment: fixed; color: white; font-size: 50px;"><a href="http://www.projectunknown.php5.sk/ITWproj/index.html">WWW version here!</a></li>
+    <li style="background: url(images/slider-2.jpg); background-size: cover; background-attachment: fixed; color: white; font-size: 50px;"><a href="http://www.projectunknown.php5.sk/ITWproj/index.html">Amazing visual presentation!</a></li>
+    <li style="background: url(images/slider-3.jpg); background-size: cover; background-attachment: fixed; color: white; font-size: 50px;"><a href="http://www.projectunknown.php5.sk/ITWproj/index.html">Great arome, and delicious taste!</a></li>
+    <li style="background: url(images/slider-4.jpg); background-size: cover; background-attachment: fixed; color: white; font-size: 50px;"><a href="http://www.projectunknown.php5.sk/ITWproj/index.html">High quality beans!</a></li>
+  </ul>  
+</div>
+		<!------End Slider ------------>
+		 <!---start-content---->
+		 <div class="wrapper">
+		 	<div class="content">
+		 		
+		 			<br>
+		 			<h1>SL Coffee</h1>
+		 			<hr class="decorative">
+		 			<br>
+		 			<h2>Breakfast</h2>
+		 			<hr>
+
+		 	<div class="findus">
+		 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		 			<div style="margin-left: 20px;">
+		 			<img src="images/aftnun.jpg" style="width: 80%">
+		 			<br>
+		 			<div class="opinion">
+
+		 				<h3>What kind of coffee do you prefer?</h3>
+		 					<button onclick="checkCookie(1)">VOTE!</button> <br>
+		 					<label style="color: brown;">Favourite Coffee:</label>
+		 					<label style="color: red;" id="Answer"></label>
+		 				<!--COOKIE HANDLING FUNCTION JAVASCRIPT-->
+
+		 			</div>
+		 			</div>
+
+		 	</div>
+
+		 	<div class="openinghours" style="text-align: center; margin: 0 auto;">
+		 		<h2>Opening Hours</h2>
+		 		<hr>
+		 		<table align=center style="font-size: 25px">
+					<tr><th>Monday</th><td>9:00 - 17:00</td></tr>
+					<tr><th>Tuesday</th><td>9:00 - 17:00</td></tr>
+					<tr><th>Wednesday</th><td>9:00 - 17:00</td></tr>
+					<tr><th>Thursday</th><td>9:00 - 17:00</td></tr>
+					<tr><th>Friday</th><td>7:00 - 18:00</td></tr>
+					<tr><th>Saturday</th><td>11:00 - 18:00</td></tr>
+					<tr><th>Sunday</th><td>11:00 - 18:00</td></tr>
+				</table>
+
+		 	</div>
+		 	<hr class="decorative">
+		</div>
+		
+		</div>
+
+		<footer class="footer">
+			<div class="info">
+				<div>
+					<p>Contact information:</p>
+					<p>Nevidzany 40</p>
+					<p>97227</p>
+					<p>Liestany</p>
+				</div>
+				<div>
+					<p>Social networks:</p>
+					<p><a  style="color: #A3793D" href="">Facebook</a></p>
+					<p><a  style="color: #A3793D" href="">Twitter</a></p>
+					<p><a  style="color: #A3793D" href="">Instagram</a></p>
+				</div>
+			</div>
+			<div class="copyright">
+				<br>
+				®All Rights reserver Samuel Líska™
+			</div>
+		</footer>
+	</body>
+</html>
+
+
+<script type="text/javascript">
+		 					$(':checkbox').on("change", function(){
+		 						var checkboxValues = {};
+		 						$(':checkbox').each(function(){
+		 							checkboxValues[this.id] = this.checked;
+		 						});
+		 						$.cookie('checkboxValues', checkboxValues, {expires: 7, path: '/'})
+		 					});
+
+		 					function repopulateCheckboxes(){
+		 						var checkboxValues = $.cookie('checkboxValues');
+		 						if (checkboxValues){
+		 							Object.keys(checkboxValues).forEach(function(element){
+		 								var checked = checkboxValues[element];
+		 								$('#' + element).prop('checked', checked);
+		 							});
+		 						}
+		 					}
+
+		 					$.cookie.json = true;
+		 					repopulateCheckboxes();
+		 				</script>
+
+
